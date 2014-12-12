@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDBUpdate", "SimpleDBUpdate\SimpleDBUpdate.csproj", "{94532734-6827-428E-A980-B4F911816539}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC49B5FF-D835-47C3-8DFD-B5C1D702B8C7}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDBUpdate.Data", "SimpleDBUpdate.Data\SimpleDBUpdate.Data.csproj", "{FFB1D8CB-D3D5-49F9-AE64-B95A864075DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +21,10 @@ Global
 		{94532734-6827-428E-A980-B4F911816539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94532734-6827-428E-A980-B4F911816539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94532734-6827-428E-A980-B4F911816539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB1D8CB-D3D5-49F9-AE64-B95A864075DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB1D8CB-D3D5-49F9-AE64-B95A864075DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB1D8CB-D3D5-49F9-AE64-B95A864075DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB1D8CB-D3D5-49F9-AE64-B95A864075DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
