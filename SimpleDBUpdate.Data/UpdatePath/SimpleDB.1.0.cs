@@ -9,13 +9,13 @@ namespace SimpleDBUpdate.Data
   {
     #region Version 1.0
     [SimpleDBError("1.0")]
-    private string CreateDatabase1Error
+    public string CreateDatabase1Error
     {
       get { return "Error - Failed to create Base Table"; }
     }
 
     [SimpleDBVersion("1.0")]
-    private string CreateDatabase1()
+    public string CreateDatabase1()
     {
       // Create the table(s) I need...
       _cmd.CommandText = "create table _foobarbaz(foo, bar, baz)";
