@@ -12,6 +12,7 @@ namespace SimpleDBUpdate.Data
     private static string _conString = "Data Source=" + _dbName + ";Version=3";
     internal SQLiteConnection _con;
     private SQLiteCommand _cmd;
+    private SimpleDBInfo _info;
 
     public SimpleDB()
     {
@@ -24,6 +25,15 @@ namespace SimpleDBUpdate.Data
       _con = new SQLiteConnection(_conString);
       _con.Open();
       _cmd = _con.CreateCommand();
+    }
+
+    public SimpleDBInfo Info
+    {
+      get
+      {
+        if (_info == null) _info = new SimpleDBInfo(this);
+        return _info;
+      }
     }
 
     private bool TableExists(string tableName)
