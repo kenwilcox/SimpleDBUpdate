@@ -54,16 +54,10 @@ namespace SimpleDBUpdate.Data
         _insCmd.Parameters["name"].Value = VERSION;
         _insCmd.Parameters["value"].Value = "0";
         _insCmd.ExecuteNonQuery();
-
-        //_insCmd.Parameters["name"].Value = APPLIED;
-        //_insCmd.Parameters["value"].Value = "";
-        //_insCmd.ExecuteNonQuery();
       }
 
       private bool KeyExists(string name)
       {
-        //SqlCeCommand cmd = _con.CreateCommand();
-        //_selCmd.CommandText = "select value from _info where name = @name";
         _selCmd.Parameters["name"].Value = name;
         object obj = _selCmd.ExecuteScalar();
         return obj != null;
@@ -111,7 +105,6 @@ namespace SimpleDBUpdate.Data
       public string GetValue(string name, string defaultValue = "")
       {
         string ret = defaultValue;
-        //_selCmd.CommandText = "select value from _info where name = @name";
         _selCmd.Parameters["name"].Value = name;
         object obj = _selCmd.ExecuteScalar();
         if (obj != null) ret = (string)obj;
@@ -140,7 +133,6 @@ namespace SimpleDBUpdate.Data
 
       private void InsertValue(string name, string value)
       {
-        //_insCmd.CommandText = "insert into _info(name, value) values(@name, @value)";
         _insCmd.Parameters["name"].Value = name;
         _insCmd.Parameters["value"].Value = value;
         _insCmd.ExecuteNonQuery();
@@ -148,7 +140,6 @@ namespace SimpleDBUpdate.Data
 
       private void UpdateValue(string name, string value)
       {
-        //_updCmd.CommandText = "update _info set value = @value where name = @name";
         _updCmd.Parameters["name"].Value = name;
         _updCmd.Parameters["value"].Value = value;
         _updCmd.ExecuteNonQuery();
