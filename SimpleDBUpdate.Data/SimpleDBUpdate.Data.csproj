@@ -54,17 +54,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleDB.1.0.cs" />
+    <Compile Include="UpdatePath\SimpleDB.1.9.cs" />
+    <Compile Include="UpdatePath\SimpleDB.2.1.cs" />
+    <Compile Include="UpdatePath\SimpleDB.2.1.1.cs" />
+    <Compile Include="UpdatePath\SimpleDB.2.0.cs" />
+    <Compile Include="UpdatePath\SimpleDB.1.1.cs" />
     <Compile Include="SimpleDB.cs" />
     <Compile Include="SimpleDB.Info.cs" />
     <Compile Include="SimpleDB.Verify.cs" />
     <Compile Include="SimpleDBAttributes.cs" />
     <Compile Include="SimpleDBException.cs" />
+    <Compile Include="UpdatePath\SimpleDB.1.0.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
