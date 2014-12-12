@@ -25,5 +25,16 @@ namespace SimpleDBUpdate.Data
       _con.Open();
       _cmd = _con.CreateCommand();
     }
+
+    private bool TableExists(string tableName)
+    {
+      bool ret = false;
+      SQLiteCommand cmd = _con.CreateCommand();
+      cmd.CommandText = "select name from sqlite_master where type='table' and name = '" + tableName + "'";
+      // sqlite_master = type, name, tbl_name, rootpage, sql
+      object name = cmd.ExecuteScalar();
+      ret = ((null != name) & (tableName.Equals((string)name)));
+      return ret;
+    }
   }
 }
