@@ -18,13 +18,21 @@ namespace SimpleDBUpdate.Data
     {
       // User of the code should never have to worry about the database
       OpenDatabase();
+      VerifyDatabase();
     }
 
     private void OpenDatabase()
     {
-      _con = new SQLiteConnection(_conString);
-      _con.Open();
-      _cmd = _con.CreateCommand();
+      try
+      {
+        _con = new SQLiteConnection(_conString);
+        _con.Open();
+        _cmd = _con.CreateCommand();
+      }
+      catch (Exception e)
+      {
+        throw new Exception(e.Message);
+      }
     }
 
     public SimpleDBInfo Info

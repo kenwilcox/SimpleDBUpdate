@@ -20,6 +20,7 @@ namespace SimpleDBUpdate
     private void frmMain_Load(object sender, EventArgs e)
     {
       SimpleDB db = new SimpleDB();
+      lbVersions.Items.AddRange(db.Info.GetAppliedVersions());
     }
   }
 }
